@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div class="login">
+  <div class="sign-up">
+    <h3>Seller Login</h3>
+    <form #loginSignUp="ngForm" (ngSubmit)="signUp(loginSignUp.value)" class="common-form">
+      <input class="form-input" type="text" placeholder="Username" name="name" ngModel>
+      <input class="form-input" type="password" placeholder="Password" name="password" ngModel>
+      <input class="form-input" type="text" placeholder="Email" name="email" ngModel>
+      <button class="form-button" >Sign Up</button>
+    </form>
+  </div>
+</div>

@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
+import { SellerService } from '../services/seller.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  signUp(data:object):void {
+
+  constructor(private seller:SellerService){}
+
+  signUp(data: object): void {
     console.warn(data);
+    this.seller.sellerSignUp();
   }
 }
